@@ -19,7 +19,7 @@ body {
   width: 100%;
   height: 700px;
   z-index: -1;
-  background-image: url('../images/dandelion.png');
+  background-image: url('../images/dandelion-bg.png');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
