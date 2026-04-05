@@ -1,28 +1,41 @@
-const recolorFirstCardButton = document.getElementById('recolor-button');
 const firstCatalogCard = document.querySelector('.product-card');
-const blueHashColor = "#0000ff";
+const catalogCards = document.querySelectorAll('.product-card');
+
+const recolorFirstCardButton = document.querySelector('#recolor-button');
+const recolorAllCardButton = document.querySelector('#recolor-all-button');
+const openGoogleButton = document.querySelector('#open-google-button');
 
 recolorFirstCardButton.addEventListener('click', () => {
-  firstCatalogCard.style.backgroundColor = blueHashColor;
+    if (firstCatalogCard.style.backgroundColor === 'blue') {
+        firstCatalogCard.style.backgroundColor = '';
+    } else {
+        firstCatalogCard.style.backgroundColor = 'blue';
+    }
 });
-
-const greenHashColor = '#00ff44';
-
-const catalogCards = document.querySelectorAll('.product-card');
-const recolorAllCardButton = document.getElementById('recolor-all-button');
 
 recolorAllCardButton.addEventListener('click', () => {
     catalogCards.forEach(card => {
-       card.style.backgroundColor = greenHashColor;
+        if (card.style.backgroundColor === 'green') {
+            card.style.backgroundColor = '';
+        } else {
+            card.style.backgroundColor = 'green';
+        }
     });
 });
 
-const googleOpenButton = document.getElementById('open-google-button');
-googleOpenButton.addEventListener('click', openGoogle);
+catalogCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        const title = card.querySelector('.product-card__title').textContent;
+        console.log(title);
+    });
+});
 
-function openGoogle() {
-    const answer = confirm('Вы действительно хотите перейти на сайт Google?');
-    if (answer === true) {
-      window.open('https://google.com');
+openGoogleButton.addEventListener('click', () => {
+    const userAgreed = confirm('Вы действительно хотите перейти на страницу Google?');
+    if (userAgreed) {
+        console.log('Переход в Google...');
+        window.open('https://www.google.com', '_blank');
+    } else {
+        console.log('Переход отменен');
     }
-  }
+});
