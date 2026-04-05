@@ -7,16 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+ <body> 
     <div class="background-picture"></div>
 
     <div class="container">
+
         <h1 class="product-page__title">Выбери свой продукт</h1>
 
-        <div class="product-card-wrapper">
-            
+    <div class="buttons">
+        
+        <button id="recolor-button" class="recolor-btn">Изменить цвет</button> 
+        <button id="recolor-all-button" class="recolor-btn">Перекрасить все</button>
+        <button id="open-google-button" class="recolor-btn">Открыть Google</button>
+    </div>
+
+        <div class="product-card-wrapper">         
             <div class="product-card">
                 <img src="images/moisturizing-mousse.png" class="product-card__image" alt="Мусс">
                 <p class="product-card__for-skin">для нормальной кожи</p>
@@ -38,7 +46,6 @@
                     <span class="product-card__price-value">3 500 &#8381;</span>
                 </div>
             </div>
-
             <div class="product-card">
                 <img src="images/wash-gel.png" class="product-card__image" alt="Гель">
                 <p class="product-card__for-skin">для нормальной кожи</p>
@@ -49,7 +56,6 @@
                     <span class="product-card__price-value">1 650 &#8381;</span>
                 </div>
             </div>
-
             <div class="product-card">
                 <img src="images/gift-set-1.png" class="product-card__image" alt="Набор 1">
                 <p class="product-card__for-skin">для нормальной кожи</p>
@@ -60,7 +66,6 @@
                     <span class="product-card__price-value">4 750 &#8381;</span>
                 </div>
             </div>
-
             <div class="product-card">
                 <img src="images/gift-set-5.png" class="product-card__image" alt="Набор 5">
                 <p class="product-card__for-skin">для нормальной кожи</p>
@@ -73,5 +78,7 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+    <script src="homework-5.js"></script>
 </body>
 </html>
